@@ -1,0 +1,356 @@
+.home{
+    &--hero{
+        [class*="col-"]{
+            padding: 0;
+        }
+
+    }
+
+    &--imagina{
+        padding: 30px 0 ;
+        h2{
+            color:$rosa;
+            font-family: 'Conv_LUNCHBOX_BOLD';
+            text-transform: uppercase;
+            text-align: center;
+            @extend %h2;
+            
+        }
+
+        p{
+            text-align: center;
+
+            span{
+                font-family: 'Conv_Muli-Bold';
+                color:$rosa;
+            }
+        }
+
+        h4{
+            margin: 20px auto;
+            @extend %h4;
+            @include azul-rayado;
+        }
+    }
+
+
+    &--estar{
+        
+        [class*="col-"]{
+            padding: 0;
+            height: 300px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .owl-carousel{
+            @include carrusel-1;
+        }
+       
+
+        &__copy{
+            height: auto !important;
+            text-align: center;
+
+            h3{
+                @extend %h3;  
+                color: #fff;
+                font-family: 'Conv_LETTERS FOR LEARNERS';
+                font-weight: bold;
+            }
+
+            p{
+                color: #fff;
+
+                u{
+                    text-decoration: none;
+                    position: relative;
+                    white-space: nowrap;
+
+                    &:after{
+                        content: "";
+                        position: absolute;
+                        left: 0;
+                        bottom: 0;
+                        width: 100%;
+                        height: 2px;
+                        background: url("../img/icons/subrayado-blanco.png") no-repeat center / cover;
+                    }
+                }
+
+                span{
+                    color: transparent;
+                    position: relative;
+
+                    &:after{
+                        content: "";
+                        position: absolute;
+                        left: -3px;
+                        top: -3px;
+                        width: 100%;
+                        height: calc(30px + 5 * ((100vw - 320px) / 768));
+                        background: url("../img/icons/convertirte.png") no-repeat center / contain;
+                    }
+                }
+
+                b{
+                    font-family: 'Conv_Muli-Bold';
+                }
+            }
+
+            &--ausente{
+                p{
+                    span{
+                       
+                        &:after{
+                            background: url("../img/icons/indeseable.png") no-repeat center / contain;
+                        }
+                    }
+                }
+
+            }
+        }
+
+        img{
+            object-fit: fill;
+            object-position: center;
+            width: 100%;
+            height: 100%;
+        }
+
+        
+    }
+
+
+    &--estadisticas{
+        padding: 50px 0;
+
+        p{
+            text-align: center;
+
+            b{
+                color: $rosa;
+                text-transform: uppercase;
+                font-family: 'Conv_Muli-Bold';
+            }
+        }
+
+        &--bloque-1{
+            // background: url("");
+        }
+
+        &--bullets{
+            padding: 40px 0;
+
+            [class*="col-"]{
+                display: flex;
+                align-items: center;
+                margin-bottom: 30px;
+
+
+                p{
+                    @extend %p;
+                    text-align: left;
+                    padding-left: 20px;
+                    
+                    span{
+                        display: block;
+                    }
+                }
+            }
+        }
+    }
+
+    &--estigmas{
+        background: url("../img/icons/fondo-azul-2.png") no-repeat  center / cover;
+        padding: 50px 0;
+
+        .row{
+            &:last-child{
+                margin-bottom: 60px;
+            }
+        }
+
+        h2{
+            color:#fff;
+            font-family: 'Conv_LUNCHBOX_BOLD';
+            text-transform: uppercase;
+            text-align: center;
+            @extend %h2;
+        }
+
+        p{
+            color:#fff;
+            text-align: center;
+
+            b{
+                font-family: 'Conv_Muli-Bold';
+            }
+        }
+
+        .owl-carousel{
+            @include carrusel-1;
+            background: none;
+            position: relative;
+
+            .owl-stage-outer{
+                flex: 0 0 83.333333%;
+                max-width: 83.333333%;
+                margin-left: 8.333333%;
+                margin-bottom: 30px;
+
+                .item{
+                    padding: 20px 0;
+                }
+            }
+
+            .owl-dots{
+                bottom: 0;
+
+                button{
+                    background: #f4d5d5;
+                }
+            }
+        }
+    }
+
+    &--recorrido{
+        h2{
+            color:$rosa !important;
+            text-transform: uppercase;
+            text-align: center;
+            @extend %h2;
+            @include rosa-rayado;
+        }
+
+        p{
+            text-align: center;
+
+            b{
+                font-family: 'Conv_Muli-Bold';
+                color:$azul;
+            }
+        }
+
+        .owl-carousel{
+            @include carrusel-1;
+            background: none;
+            position: relative;
+
+            .owl-stage-outer{
+                flex: 0 0 83.333333%;
+                max-width: 83.333333%;
+                margin-left: 8.333333%;
+                margin-bottom: 30px;
+
+                .item{
+                    padding: 20px 0;
+                }
+            }
+
+            .owl-dots{
+                bottom: 0;
+
+                button{
+                    background: #be7ea7;
+                }
+            }
+        }
+
+        h4{
+            @extend %h4;
+            color: $rosa;
+            font-family: 'Conv_LETTERS FOR LEARNERS';
+            font-weight: bold;
+            margin: 20px 0;
+        }
+    }
+
+    &--dia{
+        background: url("../img/icons/fondo-morado-2.png") no-repeat top center / cover;
+        padding: 50px 0;
+
+        h2{
+            color:#fff !important;
+            text-transform: uppercase;
+            text-align: center;
+            @extend %h2;
+            @include rosa-rayado;
+
+            &:after{
+                background: url("../img/icons/rayon-blanco.png") no-repeat center / contain;
+            }
+        }
+
+        p{
+            text-align: center;
+            color:#fff;
+
+            b{
+                font-family: 'Conv_Muli-Bold';
+            }
+        }
+
+        &--redes{
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin: 30px auto;
+
+            img{
+                width: 70px;
+            }
+        }
+
+        &--feliz{
+            img{
+                margin: 0px auto 60px;
+            }
+        }
+    }
+
+    
+    &--busqueda{
+        
+        p{
+            color: $azul;
+            text-align: center;
+        }
+
+        h3{
+            color: $rosa;
+            text-align: center;
+            font-family: 'Conv_Muli-Bold';
+            line-height:calc(32px + 5 * ((100vw - 320px) / 768));
+            margin: 0px auto 30px;
+        }
+
+        &--copy{
+            p{
+                color: #000;
+
+                b{
+                    font-family: 'Conv_Muli-Bold';
+                    color:$rosa;
+                }
+
+                span{
+                    color:$rosa;
+                }
+            }
+        }
+
+
+        &--form{
+            margin: 20px auto;
+
+            [class*="col-"]{
+                padding: 0;
+            }
+        }
+    }
+}   
+
+

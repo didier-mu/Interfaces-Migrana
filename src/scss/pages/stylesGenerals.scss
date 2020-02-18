@@ -1,0 +1,19 @@
+h3{
+    @extend %h3;
+}
+
+p{
+    @extend %p;
+}
+
+.combo {
+    @include combo;
+}
+
+.checkboxes{
+    @include checkbox;
+}
+
+input[type=button]{
+    @include boton-on;
+}

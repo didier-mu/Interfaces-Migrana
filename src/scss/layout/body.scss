@@ -1,0 +1,15 @@
+// **** \\ STYLES_CSS // **** // 
+
+// html{
+//     opacity: 0;
+// }
+
+body {
+    font-family: 'Conv_Muli-Regular';
+
+    @import "header";
+    @import "footer";
+    @import "pages/stylesGenerals";
+    @import "pages/_home";
+
+}

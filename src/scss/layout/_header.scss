@@ -1,0 +1,42 @@
+.header{
+    @include gradiente-rosa;
+    height: 40px;
+    position: fixed;
+    top: 0;
+    z-index: 9;
+    width: 100%;
+
+    .container{
+        height: 100%;
+        align-items: center;
+        justify-content: center;
+        display: flex;
+
+        .row{
+            width: 100%;
+
+            [class*="col-"]{
+                padding: 0;
+            }
+        }
+    
+    }
+
+    
+    &--logo{
+        img{
+            max-width: 50px;
+        }
+    }
+    
+    &--navegacion{
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        
+        img{
+            width: 30px;
+        }
+        
+    }
+}
