@@ -230,12 +230,14 @@
             }
 
             .owl-dots{
-                bottom: 40px;
+                bottom: 0px;
 
                 button{
                     background: #f4d5d5;
                 }
             }
+
+           
         }
     }
 
@@ -282,7 +284,7 @@
             }
 
             .owl-dots{
-                bottom:40px;
+                bottom:-20px;
 
                 button{
                     background: #be7ea7;
@@ -426,6 +428,12 @@
             }
         }
     }
+
+   
 }   
 
-
+@media all and (-webkit-min-device-pixel-ratio:0) and (min-resolution: .001dpcm) {
+    .home--estigmas .owl-carousel .owl-dots, .home--recorrido .owl-carousel .owl-dots{
+        bottom: 40px;
+    }
+}

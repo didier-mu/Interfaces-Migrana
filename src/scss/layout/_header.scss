@@ -37,9 +37,6 @@
             background:url("../img/icons/line-puntos.png") no-repeat center / cover;
         }
 
-        // img{
-        //     max-width: 50px;
-        // }
     }
     
     &--navegacion{
@@ -87,10 +84,15 @@
                     list-style: none;
                     margin-bottom: 15px;
                     cursor: pointer;
+                    transition: .1s ease-in-out all;
 
                     a{
                         color: inherit;
                         
+                    }
+
+                    &:hover, &.activo{
+                        color: #e4c7ff;
                     }
                 }
             }

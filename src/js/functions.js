@@ -15,6 +15,9 @@ $(document).ready(function () {
         
         $(".header--navegacion .btn").removeClass("nav-on");
         $(".navbar-collapse").removeClass("show");
+        
+        $("#navbarNav li").removeClass("activo");
+        $(this).addClass("activo");
     });
 
 
@@ -142,6 +145,22 @@ $(document).ready(function () {
         ordenDia();
     });
     
+
+    var posSection = $("section");
+
+        $(document).scroll(function () {
+            posSection.each(function () {
+                var posRow = $(this).offset().top - 500;
+                var scrolleo = $(window).scrollTop();
+                var nameLi = $(this).attr("class").replace("home--", "li-");
+
+                if (scrolleo > posRow) {
+                    $("#navbarNav li").removeClass("activo");
+                    $("."+nameLi).addClass("activo");
+                }
+        });
+    });
+  
     
 });
 
