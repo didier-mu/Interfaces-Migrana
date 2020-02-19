@@ -1,0 +1,49 @@
+.footer{
+    padding: 20px 0;
+
+    p{
+        color: $azul;
+        text-align: center;
+    }
+
+    &--logos{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        img{
+            width: 30%;
+            max-width: 150px;
+        }
+    }
+
+    &--legales{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 20px 0 0;
+        flex-wrap: wrap;
+
+        a, span{
+            text-transform: uppercase;
+            text-align: center;
+            color: $azul;
+            @extend %p;
+            font-size:calc(10px + 5 * ((100vw - 320px) / 768));
+        }
+
+        span{
+            font-size:calc(11px + 5 * ((100vw - 320px) / 768));
+            margin: 0 5px;
+        }
+
+        h6{
+            @extend %h6;
+            text-align: center;
+            color: $azul;
+            font-style: italic;
+            margin: 10px 0;
+            flex-basis: inherit;
+        }
+    }
+}

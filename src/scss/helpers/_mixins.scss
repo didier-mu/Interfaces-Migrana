@@ -10,7 +10,16 @@
     opacity: .9;
 }
 
-
+@mixin gradiente-azul {
+    background: rgba(137,79,185,1);
+    background: -moz-linear-gradient(left, rgba(137,79,185,1) 0%, rgba(89,114,206,1) 100%);
+    background: -webkit-gradient(left top, right top, color-stop(0%, rgba(137,79,185,1)), color-stop(100%, rgba(89,114,206,1)));
+    background: -webkit-linear-gradient(left, rgba(137,79,185,1) 0%, rgba(89,114,206,1) 100%);
+    background: -o-linear-gradient(left, rgba(137,79,185,1) 0%, rgba(89,114,206,1) 100%);
+    background: -ms-linear-gradient(left, rgba(137,79,185,1) 0%, rgba(89,114,206,1) 100%);
+    background: linear-gradient(to right, rgba(137,79,185,1) 0%, rgba(89,114,206,1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#894fb9', endColorstr='#5972ce', GradientType=1 );
+}
 
 
 @mixin azul-rayado {
@@ -53,7 +62,7 @@
 @mixin carrusel-1 {
     
         position: absolute;
-        background: url("../img/icons/fondo-morado.png") no-repeat center / cover;
+        background: url("../img/icons/fondo-morado.png") no-repeat center / 100% 100%;
 
         .item{
             display: flex;
@@ -63,25 +72,41 @@
         }
 
         .owl-nav{
-            position: absolute;
-            z-index: -1;
             display: flex;
             align-items: center;
             justify-content: space-between;
-            top: 0;
-            bottom: 0;
-            width: 100%;
-
+           
+            
             button{
-                width: 25px;
-                height: 25px;
+                // width: 25px;
+                // height: 25px;
+                width: calc(25px + 15 * ((100vw - 320px) / 768));
+                height: calc(25px + 15 * ((100vw - 320px) / 768));
                 background: url("../img/icons/icon-flecha.png") no-repeat center / contain;
+                position: absolute;
+                top: 0;
+                bottom: 0;
                 
-
-                &.disabled{
-                    transform: rotateY(-180deg);
+                margin: auto;
+                
+                &.owl-next{
+                    right: 0;
+                    &.disabled{
+                        display: none;
+                    }
                 }
 
+                &.owl-prev{
+                    transform: rotateY(-180deg);
+                    left: 0;
+
+                    &.disabled{
+                        display: none;
+                        
+                    }
+                }
+
+                
                 span{
                     color: transparent;
                 }
@@ -122,6 +147,7 @@
     box-shadow: 2px 1000px 1px #fff inset;
     border-radius: 50px;
     margin-bottom: 20px;
+    cursor: pointer;
 
     select{
         appearance: none;
@@ -133,6 +159,7 @@
         border-radius: 50px;
         background: url("../img/icons/flecha-combo.png") no-repeat 95% center / 11px #fff;
         border: 2px solid transparent;
+        cursor: pointer;
 
         &:focus{
             outline: none;
@@ -149,6 +176,7 @@
     justify-content: flex-end;
     cursor: pointer;
     user-select: none;
+    margin-bottom: 15px;
 
     input{
         position: absolute;
@@ -157,7 +185,7 @@
         width: 0;
 
         &:checked ~ .checkmark {
-            // background-color: #2196F3;
+            background-color: #fff;
         }
 
         &:checked ~ .checkmark:after {
@@ -166,7 +194,8 @@
     }
 
     span{
-        width: 80%;
+        width: 83%;
+        font-size: calc(14px + 5 * ((100vw - 320px) / 768));
 
         a{
             color: $azul;
@@ -183,14 +212,17 @@
 
         &:after{
             left: 9px;
-            top: 5px;
-            width: 5px;
+            top: 7px;
+            width: 7px;
             height: 10px;
             border: solid $rosa;
             border-width: 0 3px 3px 0;
             -webkit-transform: rotate(45deg);
             -ms-transform: rotate(45deg);
             transform: rotate(45deg);
+            content: "";
+            position: absolute;
+            display: none;
         }
     }
 }
@@ -202,9 +234,19 @@
     width: 100%;
     color: #fff;
     opacity: 1;
-    min-height: 40px;
+    min-height: 46px;
     font-size: 20px;
     font-family: 'Conv_Muli-Bold';
     margin: 20px auto;
-    @include gradiente-rosa;
+    border: none;
+    @include gradiente-azul;
+
+    &:disabled{
+        background: #ededed;
+        color: #ccc;
+    }
+
+    &:focus{
+        outline: none;
+    }
 }

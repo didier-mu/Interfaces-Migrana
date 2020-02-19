@@ -4,15 +4,16 @@ body.home
     include includes/header.pug
 
     section.home--hero
-        .container
+        .container-fluid
             .row
                 .col-12
-                    img.img-fluid(src="img/banners/home.png", alt="")
+                    img.img-fluid.d-lg-none(src="img/banners/home.png", alt="")
+                    img.img-fluid.d-none.d-lg-block(src="img/banners/home-d.jpg", alt="")
 
     section.home--imagina
         .container
             .row
-                .col-10.offset-1
+                .col-10.offset-1.col-lg-12.offset-lg-0
                     h2 Imagina que un día
                         br 
                         |...
@@ -22,12 +23,12 @@ body.home
                             |dolorosamente brillantes, 
                         |que el significado de las palabras 
                         span 
-                            |perdiera cualquier sentido, y hasta la dulce risa de tu hijo 
-                        |se volviera insoportable... 
+                            |perdiera cualquier sentido,
+                        |y hasta la dulce risa de tu hijo 
+                        span
+                            |se volviera insoportable... 
                         
-                    h4 sin que nadie pudiera
-                        br 
-                        |comprenderlo ni ayudarte.
+                    h4 sin que nadie pudiera comprenderlo ni ayudarte.
 
 
                     p Ahora imagina sentirte así por muchos días, y que se hiciera tan recurrente, que 
@@ -36,7 +37,7 @@ body.home
                         |cuando quisieras hacer planes en tu vida:
 
     section.home--estar
-        .container
+        .container-fluid
             .row
                 .col-12
                     div.owl-carousel.owl-theme#carrusel-estar
@@ -68,35 +69,35 @@ body.home
                                     |pero aceptando sacrificar tus sueños, alejarte de las personas que amas y
                                     u
                                         |encerrarte en un cuarto  
-                                    |oscuro, hasta llegar el momento en que ya
+                                    |oscuro, hasta llegar el momento en que 
                                     u 
-                                        |nadie pueda extrañarte.
+                                        |ya nadie pueda extrañarte.
                                 
 
-                    //- img.img-fluid(src="img/icons/fondo-morado.png", alt="")
+                    
 
 
     section.home--estadisticas
         .container
             .row
-                .col-10.offset-1          
+                .col-10.offset-1.col-lg-12.offset-lg-0      
                     p Esto es lo que se vive al padecer migraña; y no, 
                         b ¡no es igual al DOLOR DE CABEZA!
 
-                .col-10.offset-1.home--estadisticas--bloque-1
-                    //- p Un dolor  de cabeza te puede quitar unas horas de juego con tu hijo; mientras la migraña te roba tantos momentos, que tu hijo simplemente dejará de buscarte.
-                    img.img-fluid(src="img/banners/estadistica-1.png", alt="")
+                .col-10.offset-1.col-lg-12.offset-lg-0.home--estadisticas--bloque-1
+                    img.img-fluid.d-lg-none(src="img/banners/estadistica-1.png", alt="")
+                    img.img-fluid.d-none.d-lg-block(src="img/banners/estadistica-1-d.png", alt="")
 
-                .col-10.offset-1.home--estadisticas--bullets
+                .col-10.offset-1.col-lg-12.offset-lg-0.home--estadisticas--bullets
                     .row
-                        .col-10.offset-1
+                        .col-10.offset-1.col-lg-4.offset-lg-0
                             img.img-fluid(src="img/icons/icon-mex.png", alt="")
                             p 
                                 span 20 millones
                                 span de mexicanos
                                 span padecen migraña
 
-                        .col-10.offset-1
+                        .col-10.offset-1.col-lg-4.offset-lg-0
                             img.img-fluid(src="img/icons/icon-mujeres.png", alt="")
                             p 
                                 span En el 70%
@@ -104,7 +105,7 @@ body.home
                                 span mujeres
                                 
 
-                        .col-10.offset-1
+                        .col-10.offset-1.col-lg-4.offset-lg-0
                             img.img-fluid(src="img/icons/icon-evolucion.png", alt="")
                             p 
                                 span Es más común
@@ -115,7 +116,7 @@ body.home
     section.home--estigmas
         .container
             .row
-                .col-10.offset-1  
+                .col-10.offset-1.col-lg-12.offset-lg-0
                     h2 Estigmas de la enfermedad
                     p Diferente al dolor de cabeza, la migraña llega a definir de tal forma a las personas, que es como vivir 
                         b 
@@ -124,7 +125,7 @@ body.home
 
 
             .row
-                .col-12
+                .col-12.col-lg-10.offset-lg-1
                     div.owl-carousel.owl-theme#carrusel-estigmas
                         div.item
                             img.img-fluid(src="img/banners/quote1.png", alt="")
@@ -145,7 +146,7 @@ body.home
                             img.img-fluid(src="img/banners/quote6.png", alt="")
                         
             .row
-                .col-10.offset-1
+                .col-10.offset-1.col-lg-12.offset-lg-0
                     p Es así que 
                         b 
                             |el 24% de ellos pierde su empleo
@@ -157,7 +158,7 @@ body.home
     section.home--recorrido
         .container
             .row
-                .col-10.offset-1  
+                .col-10.offset-1.col-lg-12.offset-lg-0
                     h2 Un largo recorrido
                   
             .row
@@ -191,7 +192,7 @@ body.home
                             img.img-fluid(src="img/banners/recorrido9.png", alt="")
                         
             .row
-                .col-10.offset-1
+                .col-10.offset-1.col-lg-12.offset-lg-0
                     p Se estima que en México 
                         b
                             |el 60% de las personas con migraña 
@@ -206,32 +207,38 @@ body.home
     section.home--dia
         .container
             .row
-                .col-10.offset-1  
+                .col-10.offset-1.col-lg-12.offset-lg-0
                     h2 ¡Cada día cuenta!
-                    p 
-                        b 
-                            |Comparte el mensaje 
-                        |y ayúdanos a combatir los prejuicios y la desinformación social.
 
-                    p Con tu apoyo, lograremos que 
-                        b 
-                            |más personas conozcan su padecimiento a tiempo,
-                        |inicien el tratamiento correcto y recuperen esos días valiosos que se pierden… 
-                        b 
-                            |detrás de la migraña.
+            .row
+                .col-10.offset-1.col-lg-6.offset-lg-0
+                    .row
+                        .col-12
+                            p 
+                                b 
+                                    |Comparte el mensaje 
+                                |y ayúdanos a combatir los prejuicios y la desinformación social.
+
+                            p Con tu apoyo, lograremos que 
+                                b 
+                                    |más personas conozcan su padecimiento a tiempo,
+                                |inicien el tratamiento correcto y recuperen esos días valiosos que se pierden… 
+                                b 
+                                    |detrás de la migraña.
 
 
-                .col-10.offset-1.home--dia--redes
-                    a(href="#!")
-                        img.img-fluid(src="img/icons/icon-fb.png", alt="")
+                        .col-12.home--dia--redes
+                            a(href="#!")
+                                img.img-fluid(src="img/icons/icon-fb.png", alt="")
 
-                    a(href="#!")
-                        img.img-fluid(src="img/icons/icon-twitter.png", alt="")
+                            a(href="#!")
+                                img.img-fluid(src="img/icons/icon-twitter.png", alt="")
 
-                    a(href="#!")
-                        img.img-fluid(src="img/icons/icon-share.png", alt="")
+                            a(href="#!")
+                                img.img-fluid(src="img/icons/icon-share.png", alt="")
 
-                .col-10.offset-1.home--dia--feliz
+            
+                .col-10.offset-1.col-lg-5.offset-lg-1.home--dia--feliz
                     p Compartir sólo te tomará un segundo y 
                         b 
                             |¡puede cambiar muchas vidas!
@@ -243,7 +250,7 @@ body.home
         .container
             
             .row
-                .col-10.offset-1 
+                .col-10.offset-1.col-lg-12.offset-lg-0
                     p Ante la menor sospecha, es mejor actuar:
                     h3 ¡Encuentra un especialista!
             
@@ -257,31 +264,41 @@ body.home
                             |últimos tratamientos en el control de la enfermedad.
 
             .row.home--busqueda--form
-                .col-10.offset-1 
+                .col-10.offset-1.col-lg-12.offset-lg-0
                     .combo
                         select
                             option(value selected disabled hidden) Selecciona tu estado
-                            option(value="1") CDMX
-                            option(value="2") CDMX
-                            option(value="3") CDMX
+                            option(value="cdmx.com") CDMX
+                            option(value="Edomex.com") Edomex
+                            option(value="Aguascalientes.com") Aguascalientes
 
                     label.checkboxes(for="")
                         span He leído el 
                             a(href="#!") Aviso de Privacidad
-                        input#check-aviso(type="checkbox" checked)
+                        input.checkbox#check-aviso(type="checkbox" )
                         div.checkmark
                     
                     label.checkboxes(for="")
                         span He leído los 
                                 a(href="#!") Términos y Condiciones
-                        input#check-terminos(type="checkbox", name="")
+                        input.checkbox#check-terminos(type="checkbox" )
                         div.checkmark
 
-                    input(type="button", value="BUSCAR")
+                    a
+                        input(type="button", value="BUSCAR")
 
 
 
+    section.home--final
+        .container
+            .row
+                .col-10.offset-1.col-lg-12.offset-lg-0
+                    p Porque sabemos que cuando se vive con migraña:
 
+                    img.img-fluid(src="img/banners/doctor.png", alt="")
+
+                    h4 #CadaDíaCuenta
+                        span ¡Decídete a actuar!
 
     include includes/footer.pug
                                             

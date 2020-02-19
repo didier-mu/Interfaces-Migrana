@@ -1,24 +1,26 @@
 header.header
     .container
         .row
-            .col-6.header--logo
-                img.img-fluid(src="img/icons/logo-migrana-m.png", alt="Migraña")
+            .col-6.col-lg-2.header--logo
+                //- img.img-fluid(src="img/icons/logo-migrana-m.png", alt="Migraña")
 
-            .col-6.header--navegacion
+            .col-6.col-lg-10.header--navegacion
                 nav.navbar-expand-lg
-                    img.img-fluid(src="img/icons/icon-ham.svg", alt="", data-toggle='collapse' data-target='#navbarNav' aria-controls='navbarNav' aria-expanded='false' aria-label='Toggle navigation')
+                    .btn(data-toggle='collapse' data-target='#navbarNav' aria-controls='navbarNav' aria-expanded='false' aria-label='Toggle navigation')
                         
                     div.collapse.navbar-collapse#navbarNav
                         ul
-                            li
-                                a.li-nosotros(href="nosotros.html") Nosotros
-                            li 
-                                a.li-eventos(href="eventos.html") Eventos
-                            li 
-                                a.li-comollegar(href="como-llegar.html") Cómo llegar
-                            li 
-                                a.li-rentar(href="rentar-inmueble.html") Rentar inmueble
-                            li 
-                                a.li-red(href="red-inmuebles.html") Red de inmuebles Ocesa
-                            li  
-                                a.li-faqs(href="preguntas-frecuentes.html") FAQ's
+                        
+                            li.li-hero Inicio
+                        
+                            li.li-estar Realidad
+                        
+                            li.li-estigmas Estigmas
+                        
+                            li.li-recorrido Recorrido
+                        
+                            li.li-dia CadaDíaCuenta
+                        
+                            li.li-busqueda
+                                button.btn-blanco CONSULTAS
+                                

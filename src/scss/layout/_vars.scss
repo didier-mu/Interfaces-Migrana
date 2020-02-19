@@ -6,20 +6,21 @@ $azul: #5872ce;
 
 // FONTS
 
+
 %h2 {
-    font-size:calc(36px + 5 * ((100vw - 320px) / 768));
-    line-height:calc(38px + 5 * ((100vw - 320px) / 768));
+    font-size:calc(36px + 40 * ((100vw - 320px) / 768));
+    line-height:calc(38px + 10 * ((100vw - 320px) / 768));
 }
 
 %h3 {
-    font-size:calc(32px + 5 * ((100vw - 320px) / 768));
-    line-height:calc(25px + 5 * ((100vw - 320px) / 768));
+    font-size:calc(32px + 12 * ((100vw - 320px) / 768));
+    line-height:calc(25px + 12 * ((100vw - 320px) / 768));
     margin-bottom: 15px;
 }
 
 %h4 {
-    font-size:calc(25px + 5 * ((100vw - 320px) / 768));
-    line-height:calc(25px + 5 * ((100vw - 320px) / 768));;
+    font-size:calc(25px + 22 * ((100vw - 320px) / 768));
+    line-height:calc(25px + 22 * ((100vw - 320px) / 768));;
 }
 
 %h5 {
@@ -27,7 +28,12 @@ $azul: #5872ce;
     line-height:calc(25px + 5 * ((100vw - 320px) / 768));
 }
 
+%h6 {
+    font-size:calc(10px + 5 * ((100vw - 320px) / 768));
+    line-height:calc(12px + 5 * ((100vw - 320px) / 768));
+}
+
 %p{
-    font-size:calc(14px + 5 * ((100vw - 320px) / 768));
-    line-height:calc(20px + 5 * ((100vw - 320px) / 768));
+    font-size:calc(14px + 6 * ((100vw - 320px) / 768));
+    line-height:calc(20px + 8 * ((100vw - 320px) / 768));
 }

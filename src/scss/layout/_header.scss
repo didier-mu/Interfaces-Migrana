@@ -1,6 +1,6 @@
 .header{
     @include gradiente-rosa;
-    height: 40px;
+    height: 50px;
     position: fixed;
     top: 0;
     z-index: 9;
@@ -24,18 +24,76 @@
 
     
     &--logo{
-        img{
-            max-width: 50px;
+        background:url("../img/icons/logo-migrana.png") no-repeat left center / contain;
+        display: flex;
+        align-items: center;
+        
+        &:after{
+            content: "";
+            position: absolute;
+            left: 60px;
+            width: 2px;
+            height: 40px;
+            background:url("../img/icons/line-puntos.png") no-repeat center / cover;
         }
+
+        // img{
+        //     max-width: 50px;
+        // }
     }
     
     &--navegacion{
         display: flex;
         align-items: center;
         justify-content: flex-end;
+        position: relative;
+
         
+        .btn{
+            width: 40px;
+            height: 40px;
+            background: url("../img/icons/icon-ham.svg") no-repeat center / contain;
+            transition: .2s ease-in-out all;
+
+            &.nav-on{
+                background: url("../img/icons/close.svg") no-repeat center / 25px;
+            }
+        }
+
         img{
             width: 30px;
+        }
+
+        #navbarNav{
+            position: fixed;
+            top: 40px;
+            left:0;
+            width: 100vw;
+            // height: 100vh;
+            padding: 20px 15px;
+            @include gradiente-rosa;
+            opacity: 1;
+
+            ul{
+                max-width: 720px;
+                padding:15px 15px 0;
+                margin-right: auto;
+                margin-left: auto;
+                width: 100%;
+
+                li{
+                    text-align: right;
+                    color: #fff;
+                    list-style: none;
+                    margin-bottom: 15px;
+                    cursor: pointer;
+
+                    a{
+                        color: inherit;
+                        
+                    }
+                }
+            }
         }
         
     }

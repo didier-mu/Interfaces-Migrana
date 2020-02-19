@@ -47,6 +47,11 @@
 
         .owl-carousel{
             @include carrusel-1;
+            transition: .3s ease-in-out all;
+
+            &.carrusel-estar-2{
+                background: url("../img/icons/fondo-azul.png") no-repeat center / 100% 100%;
+            }
         }
        
 
@@ -88,7 +93,7 @@
                         content: "";
                         position: absolute;
                         left: -3px;
-                        top: -3px;
+                        top: -5px;
                         width: 100%;
                         height: calc(30px + 5 * ((100vw - 320px) / 768));
                         background: url("../img/icons/convertirte.png") no-repeat center / contain;
@@ -132,23 +137,31 @@
 
             b{
                 color: $rosa;
-                text-transform: uppercase;
                 font-family: 'Conv_Muli-Bold';
             }
         }
 
         &--bloque-1{
-            // background: url("");
+            justify-content: center;
+            display: flex;
+
+            img{
+                margin: 15px auto 0;
+            }
         }
 
+   
         &--bullets{
-            padding: 40px 0;
+            padding: 40px 0 0;
 
             [class*="col-"]{
                 display: flex;
                 align-items: center;
                 margin-bottom: 30px;
 
+                img{
+                    max-width: 35%;
+                }
 
                 p{
                     @extend %p;
@@ -157,6 +170,16 @@
                     
                     span{
                         display: block;
+
+                        &:first-child{
+                            color: $azul;
+                            font-family: 'Conv_Muli-Bold';
+                        }
+
+                        &:last-child{
+                            color: $rosa;
+                            font-family: 'Conv_Muli-Bold';
+                        }
                     }
                 }
             }
@@ -164,7 +187,7 @@
     }
 
     &--estigmas{
-        background: url("../img/icons/fondo-azul-2.png") no-repeat  center / cover;
+        background: url("../img/icons/fondo-azul-2.png") no-repeat  center / 100% 100%;
         padding: 50px 0;
 
         .row{
@@ -196,18 +219,18 @@
             position: relative;
 
             .owl-stage-outer{
-                flex: 0 0 83.333333%;
-                max-width: 83.333333%;
-                margin-left: 8.333333%;
-                margin-bottom: 30px;
+                margin-bottom: 40px;
 
                 .item{
                     padding: 20px 0;
+                    img{
+                         max-width: 83.333333%;
+                    }   
                 }
             }
 
             .owl-dots{
-                bottom: 0;
+                bottom: 40px;
 
                 button{
                     background: #f4d5d5;
@@ -217,6 +240,8 @@
     }
 
     &--recorrido{
+        padding: 0 0 30px;
+
         h2{
             color:$rosa !important;
             text-transform: uppercase;
@@ -238,20 +263,26 @@
             @include carrusel-1;
             background: none;
             position: relative;
+            
+            .owl-stage{
+                display: flex;
+                align-items: baseline;
+            }
 
             .owl-stage-outer{
-                flex: 0 0 83.333333%;
-                max-width: 83.333333%;
-                margin-left: 8.333333%;
-                margin-bottom: 30px;
+                margin-bottom: 60px;
 
                 .item{
                     padding: 20px 0;
+
+                    img{
+                        max-width: 83.333333%;
+                   }  
                 }
             }
 
             .owl-dots{
-                bottom: 0;
+                bottom:40px;
 
                 button{
                     background: #be7ea7;
@@ -265,17 +296,19 @@
             font-family: 'Conv_LETTERS FOR LEARNERS';
             font-weight: bold;
             margin: 20px 0;
+            text-align: center;
         }
     }
 
     &--dia{
-        background: url("../img/icons/fondo-morado-2.png") no-repeat top center / cover;
+        background: url("../img/icons/fondo-morado-2.png") no-repeat top center / 100% 100%;
         padding: 50px 0;
 
         h2{
             color:#fff !important;
             text-transform: uppercase;
             text-align: center;
+            margin: 20px auto;
             @extend %h2;
             @include rosa-rayado;
 
@@ -296,7 +329,7 @@
         &--redes{
             display: flex;
             align-items: center;
-            justify-content: space-between;
+            justify-content: space-evenly;
             margin: 30px auto;
 
             img{
@@ -325,6 +358,7 @@
             font-family: 'Conv_Muli-Bold';
             line-height:calc(32px + 5 * ((100vw - 320px) / 768));
             margin: 0px auto 30px;
+            text-transform: uppercase;
         }
 
         &--copy{
@@ -344,10 +378,38 @@
 
 
         &--form{
-            margin: 20px auto;
+            margin: 20px auto 0;
 
             [class*="col-"]{
                 padding: 0;
+            }
+        }
+    }
+
+    &--final{
+        background: url("../img/icons/fondo-azul-3.png") no-repeat center / 100% 100%;
+        padding: 50px 0 30px;
+
+        p {
+            color: #fff;
+            text-align: center;
+            margin-top: 50px;
+        }
+
+        img{
+            margin: 0px auto 30px;
+        }
+
+        h4{
+            color: #fff;
+            text-align: center;
+            
+            
+            span{
+                display: block;
+                text-transform: uppercase;
+                margin-top: 5px;
+                @extend %p;
             }
         }
     }

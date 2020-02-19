@@ -17,3 +17,13 @@ p{
 input[type=button]{
     @include boton-on;
 }
+
+.btn-blanco{
+    @include boton-on;
+    background: #fff;
+    color: $azul;
+    max-width: 120px;
+    font-size:14px;
+    min-height: 30px;
+    margin: 10px 0;
+}
