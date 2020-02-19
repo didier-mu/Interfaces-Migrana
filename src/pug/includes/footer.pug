@@ -1,17 +1,17 @@
 footer.footer
     .container
         .row
-            .col-10.offset-1
+            .col-10.offset-1.col-lg-3
                 p Con el apoyo de:
 
-            .col-10.offset-1.footer--logos
+            .col-10.offset-1.col-lg-7.offset-lg-0.footer--logos
                 img.img-fluid(src="img/icons/logo-novartis.png", alt="")
                 img.img-fluid(src="img/icons/logo-topdoctors.png", alt="")
                 img.img-fluid(src="img/icons/logo-amcemig.png", alt="")
 
             .col-10.offset-1.footer--legales
-                a(href="#!") aviso de privacidad
+                a(data-toggle="modal" data-target="#legalesModal") aviso de privacidad
                 span /
-                a(href="#!") términos y condiciones
+                a(data-toggle="modal" data-target="#terminosModal") términos y condiciones
 
                 h6 sujeto a cambios sin previo aviso

@@ -83,6 +83,7 @@ $(document).ready(function () {
     });
 
 
+
     // FORMULARIO
     
     $(".home--busqueda--form label").on("click", function () {
@@ -98,10 +99,10 @@ $(document).ready(function () {
 
 
     $(".home--busqueda--form select").on("change", function () {
-        $(".home--busqueda--form input[type=button]").parent().attr({ "href": $(this).val(),"target":"_blank" });
+        $(".home--busqueda .btn-on").parent().attr({ "href": $(this).val(),"target":"_blank" });
     });
 
-    $(".home--busqueda--form input[type=button]").on("click", function () {
+    $(".home--busqueda .btn-on").on("click", function () {
 
         
         if ($(".home--busqueda--form select").val() == null) {
@@ -123,6 +124,23 @@ $(document).ready(function () {
     });
 
     
+    /// ORDEN CADA DIA
+
+    function ordenDia() {
+        if ($(window).width() > 996) {
+            $(".home--final--copy").append($(".home--final--col h4"));
+        }
+    
+        else {
+            $(".home--final--col").append($(".home--final--col h4"));
+        }
+    }
+
+    ordenDia();
+
+    $(window).on('resize', function() {
+        ordenDia();
+    });
     
     
 });

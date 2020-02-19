@@ -374,6 +374,19 @@
                     color:$rosa;
                 }
             }
+
+            a{
+                text-decoration: none;
+            }
+
+            label{
+                a{
+                    &:hover{
+                        color: $azul;
+                        text-decoration: underline;
+                    }
+                }
+            }
         }
 
 

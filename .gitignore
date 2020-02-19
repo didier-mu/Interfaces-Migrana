@@ -45,6 +45,6 @@ Temporary Items
 /node_modules/
 
 ### Distribution/build folder ###
-dist/
+# dist/
 src/.vscode
 src/.htaccess
