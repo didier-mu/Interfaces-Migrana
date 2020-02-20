@@ -42,6 +42,13 @@ body {
                 &:after{
                     left: auto;
                     right: 0;
+                    display: none;
+                }
+
+                &.l-m{
+                    &:after{
+                        display: block;
+                    }
                 }
             }
 
@@ -75,6 +82,7 @@ body {
                             display: flex;
                             align-items: center;
                             text-align: center;
+                            order: 2;
 
                             &:before{
                                 content: "";
@@ -96,6 +104,27 @@ body {
                                     display: none;
                                 }
                             }
+
+                            &.li-video{
+                                border: none;
+                                margin: 0;
+                                padding: 0 20px;
+                                order: 1;
+
+                                &:after{
+                                    content: "";
+                                    position: absolute;
+                                    right: 0;
+                                    width: 2px;
+                                    height: 40px;
+                                    background:url("../img/icons/line-puntos.png") no-repeat center / cover;
+                                }
+                            }
+
+                            .btn-blanco{
+                                margin: 10px auto;
+                            }
+
                         }
                     }
                 }
@@ -106,10 +135,6 @@ body {
 
             &--hero{
                 margin-bottom: 30px;
-
-                img{
-                    width: 100%;
-                }
             }
 
             &--imagina{
@@ -266,6 +291,10 @@ body {
                         text-align: justify;
                         padding-right: 30px;
                     }
+
+                    .alert{
+                        bottom: -40px;
+                    }
                 }
 
                 &--form{
@@ -379,6 +408,14 @@ body {
             }
         }
         
+        .btn-doctors{
+            width: 50px;
+            height: 60px;
+
+            &:hover,&.on-doc{
+                width: 197px;
+            }
+        }
 
     }// 996
 

@@ -212,7 +212,10 @@
 
         &:after{
             left: 9px;
-            top: 7px;
+            // top: 7px;
+            top: 0;
+            bottom: 0;
+            margin: auto;
             width: 7px;
             height: 10px;
             border: solid $rosa;
