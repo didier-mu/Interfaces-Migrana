@@ -9,29 +9,34 @@ $(document).ready(function () {
     
     $("#navbarNav li").not(".li-video").on("click", function () {
         var nameLi = $(this).attr("class").replace("li-", "home--"),
-            nameSection = $("." + nameLi).offset().top - 100;
-        
-        
-        $("html, body").animate({ scrollTop: nameSection }, 1500);
+            nameSection = $("." + nameLi).offset().top;
+
+        // $("html, body").animate({ scrollTop: nameSection = $("." + nameLi).offset().top - 150}, 1500);
+        $("html, body").animate({ scrollTop: nameSection = $("." + nameLi).offset().top - 150 }, 1500);
         
         $(".header--navegacion .btn").removeClass("nav-on");
         $(".navbar-collapse").removeClass("show");
         
         $("#navbarNav li").removeClass("activo");
         $(this).addClass("activo");
+
+        return false;
         
     });
 
     $(".btn-doctors").on("click", function () {
-        var videoS = $(".home--busqueda").offset().top - 100;
-
-        $("html, body").animate({ scrollTop: videoS }, 1500);
+        var videoS = $(".home--busqueda").offset().top;
+        
+        // $("html, body").animate({ scrollTop: $(".home--busqueda").offset().top - 150 }, 1000);
+        $("html, body").animate({ scrollTop: $(".home--busqueda").offset().top - 200 }, 1500);
 
         $(this).addClass("on-doc");
 
         setTimeout(function () {
             $(".btn-doctors").removeClass("on-doc");
         }, 2000);
+
+        return false;
     });
 
     
