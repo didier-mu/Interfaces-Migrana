@@ -31,6 +31,7 @@
             @extend %p;
             font-size:calc(10px + 5 * ((100vw - 320px) / 768));
             cursor: pointer;
+            font-family: 'Conv_Muli-Bold';
         }
 
         span{
