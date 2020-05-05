@@ -148,6 +148,10 @@ $(document).ready(function () {
 
             if ($(".checkbox[checked]").length == 2) {
                 $(".alert").fadeOut();
+                
+                window.dataLayer = window.dataLayer || [];
+                window.dataLayer.push({'event': 'buscarEspecialista_Grt'});
+                
                 return true;
             }
     
