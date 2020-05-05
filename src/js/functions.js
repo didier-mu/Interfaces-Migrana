@@ -93,6 +93,8 @@ $(document).ready(function () {
         }
     });
 
+    $("#carrusel-estigmas .owl-prev").attr("id", "prev-estigma");
+    $("#carrusel-estigmas .owl-next").attr("id", "next-estigma");
 
     $('#carrusel-recorrido').owlCarousel({
         autoplay: false,
@@ -110,6 +112,8 @@ $(document).ready(function () {
 
     });
 
+    $("#carrusel-recorrido .owl-prev").attr("id", "prev-recorrido");
+    $("#carrusel-recorrido .owl-next").attr("id", "next-recorrido");
 
 
     // FORMULARIO
@@ -192,6 +196,31 @@ $(document).ready(function () {
         });
     });
   
+
+    /// COPY URL
+
+    $(".home--dia--redes--share").on("click", function () {
+        copy();
+        $(this).siblings("span").remove();
+        $(this).append("<span class='error-input'>¡Listo para compartir!");
+
+        setTimeout(function () {
+            $(".error-input").remove();
+        },3000);
+    });
+    
+
+    function copy() {
+        var dummy = document.createElement('input'),
+            text = window.location.href;
+
+        document.body.appendChild(dummy);
+        dummy.value = text;
+        dummy.select();
+        document.execCommand('copy');
+        document.body.removeChild(dummy);
+    }
+    
     
 });
 

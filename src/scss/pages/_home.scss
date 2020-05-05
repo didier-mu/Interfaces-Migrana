@@ -341,6 +341,22 @@
             img{
                 width: 70px;
             }
+
+            &--share{
+                position: relative;
+                cursor: pointer;
+            }
+
+            .error-input{
+                position: absolute;
+                color: $rosa;
+                padding: 5px;
+                background: #fff;
+                border-radius: 5px;
+                box-shadow: 0px 2px 5px rgba(0,0,0,.2);
+                width: fit-content;
+                text-align: center;
+            }
         }
 
         &--feliz{
