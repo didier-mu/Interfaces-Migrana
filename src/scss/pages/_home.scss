@@ -356,6 +356,8 @@
                 box-shadow: 0px 2px 5px rgba(0,0,0,.2);
                 width: fit-content;
                 text-align: center;
+                left: 0;
+                bottom: -90px;
             }
         }
 
@@ -473,6 +475,12 @@
 }   
 
 @media all and (-webkit-min-device-pixel-ratio:0) and (min-resolution: .001dpcm) {
+    .home--estigmas .owl-carousel .owl-dots, .home--recorrido .owl-carousel .owl-dots{
+        bottom: 40px;
+    }
+}
+
+@supports (-ms-ime-align:auto) {
     .home--estigmas .owl-carousel .owl-dots, .home--recorrido .owl-carousel .owl-dots{
         bottom: 40px;
     }
